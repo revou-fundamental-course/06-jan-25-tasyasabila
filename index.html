@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!--logo dan navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <img src="img/logo.jpg" class="logo" width="40" height="40" />
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#our-profile">Our Profile</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#message-us">Message Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <!--main content -->
+    <main>
+        <section id="home" class="welcome">
+            <h1>Hi! <span id="name">Tasya</span> Welcome to my web!</h1>
+            <p>Ini adalah website latihan pertama</p>
+            <div class="slider">
+                <img src="img/welcome1.png" alt="welcome Image 1" class="slide">
+                <img src="img/welcome2.png" alt="welcome Image 2" class="slide">
+                <img src="img/welcome3.png" alt="welcome Image 3" class="slide">
+
+                <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="our-profile" class="headquarter">
+            <h2>Our Headquarter</h2>
+            <div class="locations">
+                <div class="location">
+                   <img src="img/tangerang.jpg" alt="Tangerang">
+                Tangerang</div>
+                <div class="location">
+                    <img src="img/malang.jpg" alt="Malang">Malang</div>
+                     
+                <div class="location">
+                    <img src="img/surabaya.jpg" alt="Surabaya">Surabaya</div>
+                   
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Berikut adalah beberapa proyek yang telah kami kerjakan:</p>
+    <div class="portfolio-container">
+        <!-- Proyek 1 -->
+        <div class="portfolio-item">
+            <img src="img/project1.png" alt="Project 1">
+            <h3>Website E-Commerce</h3>
+            <p>Membangun platform e-commerce yang responsif dengan fitur pembayaran online dan katalog produk.</p>
+        </div>
+
+        <!-- Proyek 2 -->
+        <div class="portfolio-item">
+            <img src="img/project2.png" alt="Project 2">
+            <h3>Aplikasi Mobile</h3>
+            <p>Pengembangan aplikasi mobile untuk manajemen tugas, tersedia untuk Android dan iOS.</p>
+        </div>
+
+        <!-- Proyek 3 -->
+        <div class="portfolio-item">
+            <img src="img/project3.png" alt="Project 3">
+            <h3>Dashboard Data</h3>
+            <p>Menyediakan solusi analitik dengan dashboard interaktif untuk visualisasi data secara real-time.</p>
+        </div>
+    </div>
+</section>
+
+        <section id="message-us" class="message-us">
+            <h2>Message Us</h2>
+            <form id="message-form">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="birthdate">Tanggal Lahir</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label>Jenis Kelamin</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                    <label for="male">Laki-Laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                </div>
+
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" onclick="formValidation()">Submit</button>
+            </form>
+
+            <div id="message-display">
+                <p>Current time: <span id="current-time"></span></p>
+                <p>Nama: <span id="display-name"></span></p>
+                <p>Tanggal Lahir: <span id="display-birthdate"></span></p>
+                <p>Jenis Kelamin: <span id="display-gender"></span></p>
+                <p>Pesan: <span id="display-message"></span></p>
+            </div>
+        </section>
+    </main>
+    
+    <!--Footer -->
+    <footer style="background-color: skyblue;">
+        <span>Created by Tasya Sabila</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
